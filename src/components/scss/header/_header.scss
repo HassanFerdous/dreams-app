@@ -1,0 +1,60 @@
+.header {
+    @include flexCenter;
+    height: 8rem;
+
+    &__wrapper {
+        background: $color-primary;
+    }
+
+    &__left {
+        position: relative;
+
+        .logo {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            position: absolute;
+            top: -2.5rem;
+            left: -28.5rem;
+            bottom: 0;
+            width: 48.5rem;
+            height: 8rem;
+            content: '';
+            background-color: $secondary;
+            clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+        }
+    }
+
+    &__right {
+        @include flexCenter(null, true);
+        flex: 1;
+        padding-left: 8rem;
+    }
+
+    &__social {
+        .social-icon {
+            color: $white;
+            margin-right: 1.5rem;
+        }
+
+        .btn {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.nav {
+    &__link {
+        display: inline-block;
+        padding: 1rem;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.banner {
+    position: relative;
+
+    img {
+        max-width: 100%
+    }
+
+    &__content {
+        @include center(true, true);
+        width: 100%;
+        text-align: center;
+        color: $white;
+    }
+
+    &-title {
+        margin-bottom: 3rem;
+        font-size: 4rem;
+        font-style: italic;
+        letter-spacing: 1.5px;
+    }
+
+    &-subtitle {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn:first-child {
+        margin-right: 2rem;
+    }
+
+}

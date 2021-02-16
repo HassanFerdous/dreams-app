@@ -1,0 +1,32 @@
+@mixin flexCenter ($center: true, $between: true) {
+    display: flex;
+    align-items: center;
+
+    @if($center) {
+        justify-content: center;
+    }
+
+    @else if ($between) {
+        justify-content: space-between;
+    }
+}
+
+@mixin center($horizontal: true, $vertical: true) {
+    position: absolute;
+
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
