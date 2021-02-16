@@ -1,0 +1,18 @@
+.features {
+    padding: 10rem 0;
+}
+
+.section {
+    &-title {
+        padding-bottom: 3.6rem;
+        color: $color-primary;
+        font-size: 3.6rem;
+        font-weight: 800;
+    }
+
+    &-subtitle {
+        color: $secondary;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+}
