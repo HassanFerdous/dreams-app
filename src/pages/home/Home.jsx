@@ -7,9 +7,19 @@ import Feature from '../../components/feature/Feature';
 //Images
 import bannerImg from '../../images/hero-bg.jpg';
 import featureImg from '../../images/feature/feature-1.png'
+import Lesson from '../../components/lesson/lesson';
+import Application from '../../components/application/Application';
+
+
 
 
 function Home(props) {
+    
+    const features = [];
+    for(let i=0; i<3; i++) {
+        features.push(<Feature text="UNLIMITED CAR SUPPORT" featureImg={featureImg} key={i} />)
+    }
+
     return (
         <div>
             <Banner subtitle='BEST OPTIONS FOR YOU' title='DRIVE SAFE & GET LICENSE' bannerSrc={bannerImg} />
@@ -21,11 +31,11 @@ function Home(props) {
                         <CustomButton btnPrimary>See Courses</CustomButton>
                     </div>
                     <div className="feature-grid">
-                        <Feature text="UNLIMITED CAR SUPPORT" featureImg={featureImg} />
-                        <Feature text="UNLIMITED CAR SUPPORT" featureImg={featureImg} />
-                        <Feature text="UNLIMITED CAR SUPPORT" featureImg={featureImg} />
+                        {features.map( (feature) => feature)}
                     </div>
                 </div>
+                <Lesson />
+                <Application tranasparent />
             </div>
         </div>
     );

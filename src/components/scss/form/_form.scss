@@ -1,0 +1,42 @@
+.form {
+    &--primary {
+        background: $color-primary;
+
+        .form-control::-webkit-input-placeholder,
+        .custom-selecbox {
+            color: #fff;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 0 3rem;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &-group {
+        width: 100%;
+    }
+
+    &-control {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 1px solid #e1e1e1;
+
+        &::-webkit-input-placeholder {
+            color: $color-primary;
+        }
+    }
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.application {
+    padding: 10rem 0;
+    text-align: center;
+}
