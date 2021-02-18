@@ -17,13 +17,13 @@
         &::after {
             position: absolute;
             top: -2.5rem;
-            left: -28.5rem;
+            left: -48.5rem;
             bottom: 0;
-            width: 48.5rem;
+            width: 70.5rem;
             height: 8rem;
             content: '';
-            background-color: $secondary;
-            clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+            background-color: #f3bd00;
+            clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
         }
     }
 
