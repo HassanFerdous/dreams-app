@@ -10,6 +10,7 @@ import featureImg from '../../images/feature/feature-1.png';
 import Lesson from '../../components/lesson/lesson';
 import Application from '../../components/application/Application';
 import Pricing from '../../components/price/Pricing';
+import Team from '../team/Team';
 
 function Home(props) {
 	const features = [];
@@ -36,6 +37,7 @@ function Home(props) {
 				<Application tranasparent />
 			</div>
 			<Pricing primary />
+			<Team />
 		</div>
 	);
 }
