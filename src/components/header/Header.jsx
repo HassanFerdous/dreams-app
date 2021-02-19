@@ -3,17 +3,17 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import logo from '../../images/logo.png';
 import CustomButton from '../button/CustomButton';
 
 import '../../scss/style.scss';
+import path from '../path/path';
 
 const Header = () => {
     return (
         <div className="header__wrapper">
             <div className="container header">
                 <div className="header__left">
-                    <Link className='logo' to='/'><img src={logo} alt=""/></Link>
+                    <Link className='logo' to='/'><img src={path + '/images/logo.png'} alt=""/></Link>
                 </div>
                 <div className="header__right">
                     <div className="nav">

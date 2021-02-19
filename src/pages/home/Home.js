@@ -4,23 +4,25 @@ import CustomButton from '../../components/button/CustomButton';
 import SectionHeading from '../../components/heading/section-heading';
 import Feature from '../../components/feature/Feature';
 
-//Images
-import bannerImg from '../../images/hero-bg.jpg';
-import featureImg from '../../images/feature/feature-1.png';
 import Lesson from '../../components/lesson/lesson';
 import Application from '../../components/application/Application';
 import Pricing from '../../components/price/Pricing';
 import Team from '../team/Team';
+import path from '../../components/path/path';
 
 function Home(props) {
 	const features = [];
 	for (let i = 0; i < 3; i++) {
-		features.push(<Feature text="UNLIMITED CAR SUPPORT" featureImg={featureImg} key={i} />);
+		features.push(<Feature text="UNLIMITED CAR SUPPORT" key={i} />);
 	}
 
 	return (
 		<div>
-			<Banner subtitle="BEST OPTIONS FOR YOU" title="DRIVE SAFE & GET LICENSE" bannerSrc={bannerImg} />
+			<Banner
+				subtitle="BEST OPTIONS FOR YOU"
+				title="DRIVE SAFE & GET LICENSE"
+				bannerSrc={`${path + '/images/hero-bg.jpg'}`}
+			/>
 			<div className="container">
 				<div className="features">
 					<div className="feature-content">

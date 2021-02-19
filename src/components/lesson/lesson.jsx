@@ -1,15 +1,15 @@
 import React from 'react';
 
 import SectionHeading from '../heading/section-heading';
-import lessonImg from '../../images/video-bg.jpg';
 import CustomButton from '../button/CustomButton';
 
-import '../../scss/style.scss';;
+import '../../scss/style.scss';import path from '../path/path';
+;
 
 const Lesson = () => {
     return (
         <div className="lesson">
-            <div className="lesson__img" style={{backgroundImage: `url(${lessonImg})`}} >
+            <div className="lesson__img" style={{backgroundImage: `url(${path + "/images/video-bg.jpg"})`}} >
                 <button className="lesson-play-btn" type="button">
                     <i className="fa fa-play"></i>
                 </button>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const TeamItem = () => {
-	const [instrutorData, setInstrutorData] = useState([]);
+	const [instrutorData] = useState([]);
 
 	return (
 		<div className="instructors">
