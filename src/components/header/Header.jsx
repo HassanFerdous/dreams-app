@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import CustomButton from '../button/CustomButton';
 
-import '../scss/style.scss'
+import '../../scss/style.scss';
 
 const Header = () => {
     return (

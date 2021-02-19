@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CustomButton from '../button/CustomButton';
 
-import '../scss/style.scss';
+import '../../scss/style.scss';
 
 const Card = ({ prices }) => {
 	console.log(prices);

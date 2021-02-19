@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import instructorImg from '../../images/team/team-1.png';
 
 const TeamItem = () => {
-	const [instrutorData] = useState([
-		{
-			img: instructorImg,
-			name: 'David Warner',
-			status: 'Instructor',
-			text: 'Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.',
-		},
-	]);
+	const [instrutorData, setInstrutorData] = useState([]);
 
-	const instructors = [];
-
-	for (let i = 1; i <= 6; i++) {
-		instructors.push(
-			<div className="instructor" key={i}>
+	return (
+		<div className="instructors">
+			<div className="instructor">
 				<div className="instructor__img">
-					<img src={instrutorData.img} alt="instructor" />
+					<img src={instrutorData.img} alt="team" />
 				</div>
 				<div className="instructor__info">
 					<h3 className="instructor-name">{instrutorData.name}</h3>
@@ -40,12 +30,8 @@ const TeamItem = () => {
 					</div>
 				</div>
 			</div>
-		);
-	}
-
-	console.log(instructors);
-
-	return <div className="instructors">{instructors.map(instructor => instructor)}</div>;
+		</div>
+	);
 };
 
 export default TeamItem;

@@ -5,7 +5,7 @@ import CustomnDatePicker from '../datePicker/DatePicker';
 import FormInput from './FormInput';
 // import CustomSelectBox from '../selectBox/CustomSelectBox';
 
-import '../scss/style.scss';
+import '../../scss/style.scss';
 
 const Form = ({ formPrimary, formTransparent, title, subtitle }) => {
 	return (

@@ -4,7 +4,7 @@ import SectionHeading from '../heading/section-heading';
 import lessonImg from '../../images/video-bg.jpg';
 import CustomButton from '../button/CustomButton';
 
-import '../scss/style.scss';
+import '../../scss/style.scss';;
 
 const Lesson = () => {
     return (

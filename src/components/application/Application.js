@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../scss/style.scss';
+import '../../scss/style.scss';
 import SectionHeading from '../heading/section-heading';
 import Form from '../form/Form';
 

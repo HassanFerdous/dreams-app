@@ -4,7 +4,7 @@ import SectionHeading from '../heading/section-heading';
 import Card from './Card';
 
 import primaryBg from '../../images/pricing-bg.jpg';
-import '../scss/style.scss';
+import '../../scss/style.scss';
 
 const Pricing = ({ sectionHeading, primary, trapsparent, title, subTitle }) => {
 	return (

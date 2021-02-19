@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/components/_custom-select.scss';
+import '../../scss/style.scss';
 
 const Select = ({...otherProps}) => {
     return (
