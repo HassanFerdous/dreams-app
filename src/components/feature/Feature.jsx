@@ -1,15 +1,14 @@
 import React from 'react';
-import path from '../path/path';
 
-const Feature = ({text}) => {
-    return(
-        <div className="feature">
+const Feature = ({features}) => {
+    return features.map((feature, idx) => (
+        <div className="feature" key={idx}>
             <picture className="feature__img">
-                <img src={path + '/images/feature/feature-1.png'} alt="feature-img"/>
+                <img src={feature.featureImg} alt="feature-img"/>
             </picture>
-            <span className="feature__text">{text}</span>
+            <span className="feature__text">{feature.text}</span>
         </div>
-    )
+    ))
 };
 
 export default Feature;

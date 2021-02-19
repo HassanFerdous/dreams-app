@@ -1,20 +1,21 @@
 import React from 'react';
 import Banner from '../../components/banner/Banner';
 import CustomButton from '../../components/button/CustomButton';
-import SectionHeading from '../../components/heading/section-heading';
-import Feature from '../../components/feature/Feature';
+// import SectionHeading from '../../components/heading/section-heading';
 
 import Lesson from '../../components/lesson/lesson';
 import Application from '../../components/application/Application';
 import Pricing from '../../components/price/Pricing';
 import Team from '../team/Team';
 import path from '../../components/path/path';
+import Features from '../../components/feature/Featurs';
+import { connect } from 'react-redux';
 
-function Home(props) {
-	const features = [];
-	for (let i = 0; i < 3; i++) {
-		features.push(<Feature text="UNLIMITED CAR SUPPORT" key={i} />);
-	}
+function Home({ features }) {
+	// const features = [];
+	// for (let i = 0; i < 3; i++) {
+	// 	features.push(<Feature text="UNLIMITED CAR SUPPORT" key={i} />);
+	// }
 
 	return (
 		<div>
@@ -23,25 +24,19 @@ function Home(props) {
 				title="DRIVE SAFE & GET LICENSE"
 				bannerSrc={`${path + '/images/hero-bg.jpg'}`}
 			/>
-			<div className="container">
-				<div className="features">
-					<div className="feature-content">
-						<SectionHeading title="OUR FEATURE" subtitle="WHY CHOOSE US ?" />
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua viverra maecenas facilisis.
-						</p>
-						<CustomButton btnPrimary>See Courses</CustomButton>
-					</div>
-					<div className="feature-grid">{features.map(feature => feature)}</div>
-				</div>
-				<Lesson />
-				<Application tranasparent />
-			</div>
+
+			<Features features={features} />
+
+			<Lesson />
+			<Application tranasparent />
 			<Pricing primary />
 			<Team />
 		</div>
 	);
 }
 
-export default Home;
+const mapStateToProps = state => ({
+	features: state.features,
+});
+
+export default connect(mapStateToProps)(Home);
