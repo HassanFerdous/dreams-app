@@ -1,4 +1,3 @@
-import { act } from 'react-dom/test-utils';
 import teamData from '../../components/team-item/teamData';
 
 const INNITIAL_STATE = teamData;

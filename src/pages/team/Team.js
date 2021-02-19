@@ -5,8 +5,10 @@ import TeamItem from '../../components/team-item/TeamItem';
 const Team = () => {
 	return (
 		<div className="team">
-			<div className="team__heading">
-				<SectionHeading title="Our Greate Team" subtitle="Our Greate Team" />
+			<div className="container">
+				<div className="team__heading">
+					<SectionHeading title="Our Greate Team" subtitle="Our Greate Team" />
+				</div>
 				<TeamItem />
 			</div>
 		</div>

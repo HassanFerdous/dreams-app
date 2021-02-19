@@ -8,7 +8,7 @@ import '../../scss/style.scss';import path from '../path/path';
 
 const Lesson = () => {
     return (
-        <div className="lesson">
+        <div className="lesson container">
             <div className="lesson__img" style={{backgroundImage: `url(${path + "/images/video-bg.jpg"})`}} >
                 <button className="lesson-play-btn" type="button">
                     <i className="fa fa-play"></i>

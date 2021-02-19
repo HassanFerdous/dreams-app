@@ -1,0 +1,57 @@
+.team {
+    padding: 10rem 0;
+}
+
+.instructors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.instructor {
+    flex: 1 1 48%;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid #e1e1e1;
+    padding: 3rem;
+
+    &__img {
+        img {
+            float: left;
+        }
+    }
+
+    &__info {
+        padding-left: 2rem;
+    }
+
+    &-name {
+        margin-bottom: 1.2rem;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-primary;
+    }
+
+    &-status {
+        margin-bottom: .8rem;
+        color: $secondary;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &-text {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+
+    }
+
+    &-social {
+        &__link {
+            color: $color-primary;
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}

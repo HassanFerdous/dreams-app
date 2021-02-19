@@ -1,14 +1,8 @@
-.features {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-}
-
 .feature {
     @include flexCenter(center);
     flex-direction: column;
     padding: 5rem 3rem;
     background: $color-primary;
-
     color: $white;
 
     &:nth-child(1) {
@@ -21,6 +15,11 @@
 
     &:nth-child(3) {
         grid-area: img-3;
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
     }
 
 

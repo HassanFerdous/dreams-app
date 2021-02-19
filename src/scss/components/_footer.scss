@@ -1,0 +1,53 @@
+.footer {
+    padding-top: 10rem;
+    background: $color-primary;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        padding-bottom: 2rem;
+        display: inline-block;
+    }
+
+    &-logo {
+        display: block;
+        margin-bottom: 1.3rem;
+    }
+
+    .copy--right {
+        p {
+            padding-top: 5rem;
+            color: #c4c4c4;
+            text-align: center;
+        }
+
+        a {
+            color: $secondary;
+        }
+    }
+
+    &-top {
+        display: flex;
+        align-items: stretch;
+        gap: 3rem;
+
+    }
+
+    &-widget {
+        flex: 1 1 25%;
+    }
+
+    &-list {
+        padding-top: 1rem;
+
+        &__link,
+        a {
+            display: block;
+            color: #c4c4c4;
+            line-height: 2;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+    }
+}

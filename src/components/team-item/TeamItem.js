@@ -15,16 +15,16 @@ const TeamItem = ({ teamMembers }) => {
 						<h4 className="instructor-status">{member.status}</h4>
 						<p className="instructor-text">{member.text}</p>
 						<div className="instructor-social">
-							<Link to="#">
+							<Link className="instructor-social__link" to="#">
 								<i className="fa fa-facebook"></i>
 							</Link>
-							<Link to="#">
+							<Link className="instructor-social__link" to="#">
 								<i className="fa fa-twitter"></i>
 							</Link>
-							<Link to="#">
+							<Link className="instructor-social__link" to="#">
 								<i className="fa fa-instagram"></i>
 							</Link>
-							<Link to="#">
+							<Link className="instructor-social__link" to="#">
 								<i className="fa fa-dribbble"></i>
 							</Link>
 						</div>

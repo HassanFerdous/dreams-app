@@ -10,8 +10,10 @@ const Application = ({ primary, tranasparent }) => {
 			className={`application ${primary ? 'application--primary' : null} ${
 				tranasparent ? 'application--tranparent' : null
 			}`}>
-			<SectionHeading title="APPLICATION FORM" subtitle="GIVING BEST OPTIONS FOR YOU" />
-			<Form />
+			<div className="container">
+				<SectionHeading title="APPLICATION FORM" subtitle="GIVING BEST OPTIONS FOR YOU" />
+				<Form />
+			</div>
 		</div>
 	);
 };

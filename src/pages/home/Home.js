@@ -10,13 +10,9 @@ import Team from '../team/Team';
 import path from '../../components/path/path';
 import Features from '../../components/feature/Featurs';
 import { connect } from 'react-redux';
+import Footer from '../../components/footer/Footer';
 
 function Home({ features }) {
-	// const features = [];
-	// for (let i = 0; i < 3; i++) {
-	// 	features.push(<Feature text="UNLIMITED CAR SUPPORT" key={i} />);
-	// }
-
 	return (
 		<div>
 			<Banner
@@ -31,6 +27,7 @@ function Home({ features }) {
 			<Application tranasparent />
 			<Pricing primary />
 			<Team />
+			<Footer />
 		</div>
 	);
 }
