@@ -13,9 +13,10 @@
 
     &__heading {
         position: relative;
+        padding-right: 8rem;
         color: $color-primary;
         font-weight: 500;
-        font-size: 2.0rem;
+        font-size: 1.8rem;
         background: none;
     }
 
@@ -23,7 +24,12 @@
         max-height: 0;
 
         overflow: hidden;
-        transition: .2s all;
+        transition: .5s all;
+
+        p {
+            padding: 1rem 0;
+            font-size: 1.4rem;
+        }
     }
 
     &--open {
@@ -43,7 +49,7 @@
 
     &--open {
         &::before {
-            transform: rotate(270deg) !important;
+            transform: rotate(180deg) !important;
         }
 
         // &::after {
@@ -58,7 +64,8 @@
         content: '';
         background: $secondary;
         left: 0;
-        transition: .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        border-radius: .5rem;
+        transition: .5s all;
     }
 
     &::before {

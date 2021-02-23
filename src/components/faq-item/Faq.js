@@ -9,12 +9,11 @@ const Faq = () => {
 	const [height, setHeight] = useState(0);
 
 	const toggleOpen = (e, idx) => {
-		const selected = document.querySelectorAll('.panel__content')[idx];
-		setHeight(selected.scrollHeight);
+		const clicked = e.currentTarget.querySelector('.panel__content');
+		setHeight(clicked.scrollHeight);
 		if (select === idx) {
 			return setSelect(null);
 		}
-
 		setSelect(idx);
 	};
 
@@ -33,7 +32,7 @@ const Faq = () => {
 							className={`${select === idx ? 'collapse-bar--open collapse-bar' : 'collapse-bar'}`}></span>
 					</div>
 					<div className="panel__content" style={{ maxHeight: `${select === idx ? height : 0}px` }}>
-						{panel.content}
+						<p>{panel.content}</p>
 					</div>
 				</div>
 			))}
