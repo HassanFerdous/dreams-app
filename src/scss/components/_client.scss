@@ -1,0 +1,75 @@
+.clients {
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 48rem;
+    position: relative;
+
+}
+
+.client {
+    * {
+        color: #fff;
+    }
+
+    &__subtitle {
+        color: #f3bd00;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        max-width: 63rem;
+        line-height: 2;
+        letter-spacing: 1px;
+        font-style: italic;
+    }
+
+    &-name {
+        margin-bottom: 1rem;
+    }
+
+    .fa {
+        color: #f3bd00;
+    }
+
+
+
+}
+
+.swiper {
+    &-container {
+        padding: 6rem;
+    }
+
+    &-pagination {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+
+        &-bullet {
+            width: 10px;
+            height: 10px;
+            background: rgb(141, 141, 141);
+            display: block;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &-active {
+                background: #fff;
+            }
+        }
+    }
+}

@@ -1,5 +1,9 @@
 .team {
     padding: 10rem 0;
+
+    &__heading {
+        @include flexCenter(null, true);
+    }
 }
 
 .instructors {
