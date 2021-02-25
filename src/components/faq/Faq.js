@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import faqs from '../../pages/faq/faqData';
+import faqs from '../../pages/faq-page/faqData';
+import SectionHeading from '../../components/heading/section-heading';
 
 import '../../scss/style.scss';
 
@@ -18,7 +19,8 @@ const Faq = () => {
 	};
 
 	return (
-		<div className="panels">
+		<div className="faq-panels">
+			<SectionHeading title="Frequently asked questions" subtitle="CUSTOMER SUPPORT" />
 			{panels.map((panel, idx) => (
 				<div
 					className={`panel`}

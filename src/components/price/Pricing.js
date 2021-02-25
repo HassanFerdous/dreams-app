@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SectionHeading from '../heading/section-heading';
-import Card from './Card';
+import PriceCard from './PriceCard';
 import path from '../path/path';
 
 import '../../scss/style.scss';
@@ -14,7 +14,7 @@ const Pricing = ({ sectionHeading, primary, trapsparent, title, subTitle }) => {
 				primary ? { backgroundImage: `url(${path + '/images/pricing-bg.jpg'})` } : { background: `transparent` }
 			}>
 			{sectionHeading ? <SectionHeading title={title} subtitle={subTitle} /> : null}
-			<Card />
+			<PriceCard />
 		</div>
 	);
 };

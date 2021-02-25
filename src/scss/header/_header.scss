@@ -62,6 +62,7 @@
 
 .nav {
     &__link {
+        position: relative;
         display: inline-block;
         padding: 1rem;
         color: $white;
@@ -71,5 +72,31 @@
         &:not(:last-child) {
             margin-right: 2rem;
         }
+
+        .fa-angle-down {
+            padding-left: .5rem;
+
+            &.open {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 5;
+    width: 12rem;
+    background: $secondary;
+    margin-top: 3rem;
+
+
+    &__link {
+        display: block;
+        padding: .5rem 2rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        text-decoration: none;
+        color: $white;
     }
 }

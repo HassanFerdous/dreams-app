@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Card from '../../components/card/Card';
+import Footer from '../../components/footer/Footer';
 
 const News = () => {
-	return <div>I'm News page</div>;
+	return (
+		<Fragment>
+			<div className="container">
+				<div className="cards">
+					<Card />
+				</div>
+			</div>
+			<Footer />
+		</Fragment>
+	);
 };
 
 export default News;

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState,useRef, createRef} from 'react';
 
-import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import CustomButton from '../button/CustomButton';
@@ -8,7 +7,34 @@ import CustomButton from '../button/CustomButton';
 import '../../scss/style.scss';
 import path from '../path/path';
 
-const Header = () => {
+import {withRouter} from 'react-router-dom';
+
+
+const Header = ({history}) => {
+    const [isDropdown, setDropdown] = useState(false);
+    // const [open, setOpen] = useState(false);
+
+    let dropdownRef = useRef(null)
+    const handleClick = () => {
+        setDropdown(!isDropdown);
+    }
+
+    const closeDropdown = () => {
+        setDropdown(false)
+    }
+
+    useEffect(() => {
+        if(dropdownRef) {
+            window.addEventListener('click',() => {
+                closeDropdown();
+            })
+        } else {
+            window.removeEventListener('click', closeDropdown)
+        }
+    })
+    
+    
+      
     return (
         <div className="header__wrapper">
             <div className="container header">
@@ -18,7 +44,14 @@ const Header = () => {
                 <div className="header__right">
                     <div className="nav">
                         <Link className="nav__link" to='/'>Home</Link>
-                        <Link className="nav__link" to='/pages'>Pages</Link>
+                        <Link className="nav__link" to='#' onClick={handleClick}>Pages
+                            <i className={`${isDropdown ? 'open': null} fa fa-angle-down`}></i>
+                            {isDropdown ? (<div className="dropdown" ref={dropdownRef}>
+                                <span className="dropdown__link" onClick={() => {history.push('/about')}} to="/about">About</span>
+                                <span className="dropdown__link" onClick={() => {history.push('/faq')}} to="/faq">Faq</span>
+                                <span className="dropdown__link" onClick={() => {history.push('/pricing')}} to="/pricing">Pricing</span>
+                            </div>): null}
+                        </Link>
                         <Link className="nav__link" to='/news'>News</Link>
                         <Link className="nav__link" to='/contact'>Contact</Link>
                     </div>
@@ -46,14 +79,7 @@ const Header = () => {
     )
 }
 
-const mapStateToProps = state => ({
-    currentCount: state.count.currentCount
-})
-
-const mapDispatchToProps = dispatch => ({
-    increment: () => dispatch({type: "ADD"})
-})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(Header);

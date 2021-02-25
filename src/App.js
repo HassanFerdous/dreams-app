@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import News from './pages/news-page/News';
 import Contact from './pages/contact-page/Contact';
-import FaqPage from './pages/faq/FaqPage';
+import FaqPage from './pages/faq-page/FaqPage';
 
 function App() {
 	return (

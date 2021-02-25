@@ -2,8 +2,41 @@
     padding: 10rem 0;
 }
 
-.panels {
-    max-width: 80rem;
+.faq {
+    &-grid {
+        display: flex;
+        gap: 3rem;
+    }
+
+    &-panels {
+        flex: .5;
+    }
+
+    &-form {
+        flex: .5;
+
+        .form {
+            &-group:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+
+            &-control {
+                padding: 1.6rem 1.5rem;
+                border-color: $color-primary;
+            }
+
+            textarea {
+                min-height: 8.8rem;
+            }
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+    }
 }
 
 .panel {

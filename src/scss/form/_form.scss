@@ -32,6 +32,11 @@
     }
 }
 
+textarea {
+    resize: vertical;
+    min-height: 8.8rem;
+}
+
 .react-datepicker-wrapper {
     width: 100%;
 }

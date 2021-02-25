@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import cardReducer from './card/cardReducer';
 import countReducer from './count/countReducer';
 import featureReducer from './feature/featureReducer';
 import priceReducer from './price/priceReducer';
@@ -9,4 +10,5 @@ export default combineReducers({
 	prices: priceReducer,
 	teamMembers: teamReducer,
 	features: featureReducer,
+	cards: cardReducer,
 });
